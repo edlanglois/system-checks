@@ -37,7 +37,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     if not cuda_is_available:
         return
     for i in range(torch.cuda.device_count()):
-        print(i, ": ", torch.cuda.get_device_name(i))
+        print(i, ": ", torch.cuda.get_device_name(i), sep='')
 
 
 if __name__ == "__main__":
